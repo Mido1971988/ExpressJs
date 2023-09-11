@@ -7,3 +7,8 @@
 20230911	19:32:39	c843d0ce-e910-446b-964a-acea18fbbac0	GET	undefined	/css/style.css
 20230911	19:32:39	227b6fe3-2234-40b7-9d30-f3dd5039d6f1	GET	undefined	/img/img1.jpg
 20230911	19:34:26	3467fa79-1513-4092-ba23-decdbfc6c2e2	GET	https://www.google.com	/
+20230911	19:43:41	654f84b9-4a73-4840-ab39-8763cf8871d0	GET	undefined	/new-page
+20230911	19:43:42	85199f5c-a168-4114-8981-d7d681eb4925	GET	undefined	/css/style.css
+20230911	19:43:42	e5d12b0b-7a4e-4caf-9a71-328930d4cd5b	GET	undefined	/img/img1.jpg
+20230911	19:43:47	37581c58-9ce7-4305-ad59-3d37746bfd60	GET	undefined	/
+20230911	19:43:50	844fd618-6e72-49c8-a8c2-0c0057faf587	GET	undefined	/css/style.css
