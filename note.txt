@@ -1,0 +1,30 @@
+Express : 
+    - is a framework for node js
+    - Steps :
+        [1] npm i express
+        [2] const express = require("express")
+        [3] const app = express();
+        [4] app has alot of methods like ( get , listen , ...)
+    - express accepts regular expression like ("^/$|/index(.html)?") in app.get()
+    - Express handle 404 page automatically
+
+* custom 404 Page : 
+    [1] app.get("/*",callback) /* means any page did not mention in code
+    [2] res.status(404).sendFile(path.join(__dirname , "views" , "404.html")) inside callback function
+        we added status(404) because without it the status will be 200 
+
+* Route Hanlder 
+    you can add 3rd parameter ( next ) so ypu can chain callback function and will invoke next callback when you write next()
+    you can chain callback function in array like this ( app.get("/chain(.html)?" , [one , two , three]) )
+
+* Middleware 
+    - anything between request and response
+    - there are 3 types : 
+        [1] built-in 
+            (a) app.use(express.json)
+            (b) app.use(express.static(path.join(__dirname, "/public" ))) without it you can cannot link css or images to html file
+            (c) app.use(express.urlencoded({ extended: false})) // add before all routes so will be availabe for them
+        [2] custom 
+            like // custom Middleware logger in server.js
+        [3] from 3rd party
+            like // 3rd party Middleware cors in server.js

@@ -1,0 +1,2 @@
+20230911	19:40:56	3f514c20-e932-4325-ab09-2dfdf4931c36	Error: Not allowed by CORS
+20230911	19:40:57	7c208f01-41f1-4876-ad81-1ebe3dd1dda4	Error: Not allowed by CORS
