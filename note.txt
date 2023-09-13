@@ -22,9 +22,40 @@ Express :
     - there are 3 types : 
         [1] built-in 
             (a) app.use(express.json)
-            (b) app.use(express.static(path.join(__dirname, "/public" ))) without it you can cannot link css or images to html file
+            (b) app.use("/" , express.static(path.join(__dirname, "/public" ))) without it you can cannot link css or images to html file
             (c) app.use(express.urlencoded({ extended: false})) // add before all routes so will be availabe for them
         [2] custom 
             like // custom Middleware logger in server.js
         [3] from 3rd party
             like // 3rd party Middleware cors in server.js
+* Routes 
+    steps (we moved index , new-page and old-page to root.js and then used Routes) : 
+    [1] create file to handle Routes ( routes/subdir.js) and inside it use ( router.get() )
+    [2] module.exports = router;
+    [3] app.use('/subdir', require('./routes/subdir')); in server.js
+    [4] app.use("/subdir" , express.static(path.join(__dirname, "/public" ))) to make css works
+
+    * note : to chain get , post , put , delete in same route use router.route().get().post().put().delete() like in employees.js
+
+* MVC Pattern (only pattern how to organize your code according to MVC pattern)
+    see this video ( https://youtu.be/Dco1gzVZKVk?si=4V73LSbut3xV7pG3 )
+
+* User Password Auhtentication (https://youtu.be/Nlg0JrUt0qg?si=2KXvX_9P0CYwdvzo)
+ 
+* JWT Auhtentication (https://youtu.be/favjC6EKFgw?si=a8TlbibpPk9X6tr-)
+
+* Authorization (https://youtu.be/fUWkVxCv4IQ?si=_MFzD8GLsJsqq1MR)
+
+* difference between Auhtentication and Authorization :
+    authentication is the process of verifying who someone is, 
+    whereas authorization is the process of verifying what specific applications, 
+    files, and data a user has access to
+
+* MongoDB :
+    SQL databases are used to store structured data 
+    while NoSQL databases like MongoDB are used to save unstructured data
+
+    see MongoDB Video from this list ( https://youtube.com/playlist?list=PL0Zuz27SZ-6PFkIxaJ6Xx_X46avTM1aYw&si=6DenB09VA9AZ5tS1)
+
+    
+

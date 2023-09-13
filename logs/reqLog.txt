@@ -12,3 +12,10 @@
 20230911	19:43:42	e5d12b0b-7a4e-4caf-9a71-328930d4cd5b	GET	undefined	/img/img1.jpg
 20230911	19:43:47	37581c58-9ce7-4305-ad59-3d37746bfd60	GET	undefined	/
 20230911	19:43:50	844fd618-6e72-49c8-a8c2-0c0057faf587	GET	undefined	/css/style.css
+20230912	11:33:57	3504cfe4-3791-4a66-ae33-593c1589afb7	GET	undefined	/
+20230912	11:33:58	38962441-ba11-4988-9ec5-e1468893bacf	GET	undefined	/css/style.css
+20230912	11:33:59	cbb13f3f-810f-429b-9073-54747133ca17	GET	undefined	/favicon.ico
+20230912	11:34:09	eaedd5dd-ef78-4f95-ac37-5c68f5f1615f	GET	undefined	/new-page
+20230912	11:34:09	d5455872-ac5d-4a4e-951a-b6d68d12b89e	GET	undefined	/css/style.css
+20230912	11:34:09	2844dc8a-02cc-46ef-a55f-e33d8a3e107d	GET	undefined	/img/img1.jpg
+20230912	11:50:30	04a8a1c8-56ba-44a4-a88e-d26469d0c434	GET	undefined	/employees

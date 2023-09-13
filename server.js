@@ -29,6 +29,10 @@ app.use(logger)
 //     next()
 // })
 
+// Routes 
+app.use('/', require('./routes/root'));
+app.use('/subdir', require('./routes/subdir'));
+app.use('/employees', require('./routes/api/employees'));
 
 // built-in Middleware to handle urlencoded data
 app.use(express.urlencoded({ extended: false}))
@@ -37,22 +41,24 @@ app.use(express.urlencoded({ extended: false}))
 app.use(express.json())
 
 // Built-in Middleware fot serve static files ( like css , images )
-app.use(express.static(path.join(__dirname, "/public" )))
+app.use("/" , express.static(path.join(__dirname, "/public" )))
+app.use("/subdir" , express.static(path.join(__dirname, "/public" )))
 
-app.get("^/$|/index(.html)?", (req,res) =>{ 
-    // res.send("Hello World");
-    // res.sendFile("./views/index.html", { root : __dirname}) // we added root so express knows ./ is you root directory
-    res.sendFile(path.join(__dirname, "views" , "index.html"))
-})
+// we moved index , new-page and old-page to root.js and then used Routes
+// app.get("^/$|/index(.html)?", (req,res) =>{ 
+//     // res.send("Hello World");
+//     // res.sendFile("./views/index.html", { root : __dirname}) // we added root so express knows ./ is you root directory
+//     res.sendFile(path.join(__dirname, "views" , "index.html"))
+// })
 
-app.get("/new-page(.html)?", (req,res) =>{
-    res.sendFile(path.join(__dirname, "views" , "new-page.html"))
-})
+// app.get("/new-page(.html)?", (req,res) =>{
+//     res.sendFile(path.join(__dirname, "views" , "new-page.html"))
+// })
 
-// redirect
-app.get("/old-page(.html)?", (req,res) =>{
-    res.redirect(301 , "/new-page.html")
-})
+// // redirect
+// app.get("/old-page(.html)?", (req,res) =>{
+//     res.redirect(301 , "/new-page.html")
+// })
 
 // Route Hanlder 
 app.get("/hello(.html)?", (req,res,next) =>{
